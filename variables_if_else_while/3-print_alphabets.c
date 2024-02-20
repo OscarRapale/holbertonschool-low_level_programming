@@ -2,19 +2,19 @@
 
 /**
  * main function
- * Printing alphabets lowercase
+ * Printing alphabets lowercase and uppercase
  * Return: 0
  */
 
 int main(void)
 {
-  char letter;
+  int letter, LETTER;
 
   for (letter = 'a'; letter <= 'z'; letter++)
 		putchar(letter);
 
-  for (letter = 'A'; letter <= 'Z'; letter++)
-		putchar(letter);
+  for (LETTER = 'A'; LETTER <= 'Z'; LETTER++)
+		putchar(LETTER);
 	
   putchar('\n');
 
