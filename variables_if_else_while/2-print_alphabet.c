@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main function
- * Printing alphabets lowercase
+ * main-Print the alphabet
+ *
+ * Return: Always 0 (success)
  */
 
 int main(void)
@@ -15,5 +16,5 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-
 }
+
