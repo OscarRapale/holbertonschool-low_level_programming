@@ -6,15 +6,18 @@
  */
 int main(void)
 {
-	int i = 0;
+	int n;
 
-	for (i = 10; i < 99; i++)
+	for (n = 0 ; n < 10 ; n++)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		putchar(',');
+		putchar(n + '0');
+		if (n < 9)
+		{
+			putchar(',');
+			putchar(32);
+		}
 	}
-
 	putchar('\n');
 	return (0);
 }
+
