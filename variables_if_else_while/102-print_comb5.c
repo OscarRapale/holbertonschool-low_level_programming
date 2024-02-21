@@ -1,42 +1,33 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Printing combinations of two two-digit numbers.
  *
- * Return: Always 0 (Succes)
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	int tho;
-	int hun;
-	int ten;
-	int bas;
+	int nb1, nb2;
 
-	for (tho = 0 ; tho < 10 ; tho++)
+	for (nb1 = 0; nb1 <= 98; nb1++)
 	{
-		for (hun = 0 ; hun <= 10 ; hun++)
+		for (nb2 = nb1 + 1; nb2 <= 99; nb2++)
 		{
-			for (ten = 0 ; ten < 10 ; ten++)
-			{
-				for (bas = 0 ; bas < 10 ; bas++)
-				{
-					putchar('0' + tho);
-					putchar('0' + hun);
-					putchar(32);
-					putchar('0' + ten);
-					putchar('0' + bas);
-					if (!(tho == 9 && hun == 8))
-					{
-						putchar(',');
-						putchar(32);
-					}
-					bas++;
-				}
-			}
+			putchar((nb1 / 10) + '0');
+			putchar((nb1 % 10) + '0');
+			putchar(' ');
+			putchar((nb2 / 10) + '0');
+			putchar((nb2 % 10) + '0');
+
+			if (nb1 == 98 && nb2 == 99)
+				break;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
-		putchar('\n');
-		return (0);
-}
 
+	putchar('\n');
+
+	return (0);
+}
