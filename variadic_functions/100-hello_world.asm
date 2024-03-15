@@ -1,21 +1,31 @@
-extern printf
+.section .data
+msg db "Hello, World!\n", 14  ; String with newline (14 bytes)
 
-section .text
-global main
+.section .text
+.global _start
 
-main:
-push rbp
+_start:
+  ; Move system call number (write) to rax
+  mov rax, 1
 
-mov rdi, fmt
-mov rsi, msg
-mov rax, 0
-call printf
+  ; Set file descriptor (stdout) to rdi
+  mov rdi, 1
 
-pop rbp
+  ; Set message pointer to rsi
+  mov rsi, msg
 
-mov rax, 0
-ret
+  ; Set message length to rdx
+  mov rdx, 14
 
-section .data
-msg: db "Hello, Holberton", 0
-fmt: db "%s", 10, 0
+  ; Perform system call (write)
+  syscall
+
+  ; Move system call number (exit) to rax
+  mov rax, 60
+
+  ; Set exit code (0) to rdi
+  mov rdi, 0
+
+  ; Perform system call (exit)
+  syscall
+
