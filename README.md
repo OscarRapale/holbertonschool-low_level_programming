@@ -1,1 +1,0 @@
-Holberton Variadic functions project
