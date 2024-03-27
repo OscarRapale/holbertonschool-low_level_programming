@@ -13,5 +13,5 @@ Bit manipulation project at Holberton
 | `0-print_dlistint.c`   | `int get_bit(unsigned long int n, unsigned int index);`|
 | `1-dlistint_len.c`     | `int set_bit(unsigned long int *n, unsigned int index);`|
 | `2-add_dnodeint.c`     | `int clear_bit(unsigned long int *n, unsigned int index);`|
-| `3-add_dnodeint_end.c` | `unsigned int flip_bits(unsigned long int n, unsigned long int m);|
-| `4-free_dlistint.c`    | `int get_endianness(void);|
+| `3-add_dnodeint_end.c` | `unsigned int flip_bits(unsigned long int n, unsigned long int m);`|
+| `4-free_dlistint.c`    | `int get_endianness(void);`|
